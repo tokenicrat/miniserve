@@ -1,3 +1,7 @@
+> **WARNING**: This project is vibe-coded by AI, since I'm in immediate need for such an application.
+>
+> A more sophisticated, production-ready and human-created version is under development. Do not use this application in production.
+
 # MiniServe
 
 A minimal object storage application. Use Flask for API and NGINX for static serving.
