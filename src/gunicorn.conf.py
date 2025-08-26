@@ -27,8 +27,8 @@ proc_name: str = "object-storage-api"
 # Server mechanics
 daemon: bool = False
 pidfile: str = "/tmp/gunicorn.pid"
-user: str = "flask"
-group: str = "flask"
+user: str = "root"
+group: str = "root"
 tmp_upload_dir: str = "/tmp"
 
 # SSL (if needed)

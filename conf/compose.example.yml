@@ -14,6 +14,8 @@ services:
       # Override `gunicorn.conf.py` with environmental variables
       # - GUNICORN_WORKERS=4
       # - GUNICORN_TIMEOUT=30
+    # Make sure you have the right permission when mapping files
+    user: $(id -u):$(id -g)
     volumes:
       - ./data:/data
     networks:

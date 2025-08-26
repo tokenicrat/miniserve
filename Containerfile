@@ -1,19 +1,11 @@
 FROM quay.io/lib/python:3.13-alpine
 
-RUN apk update && apk add --no-cache curl
-
-RUN addgroup -S flask && adduser -S flask -G flask
-
 WORKDIR /app
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
 
-COPY src/ /app/
+COPY src/app.py src/gunicorn.conf.py src/wsgi.py requirements.txt /app/
+RUN pip install -r requirements.txt --no-cache-dir
 
-RUN chown -R flask:flask /app
-RUN mkdir /data && chown -R flask:flask /data
-
-USER flask
+RUN mkdir /data
 
 EXPOSE 5000
 
