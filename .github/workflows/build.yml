@@ -40,7 +40,7 @@ jobs:
           archs: amd64,arm64
           context: .
           containerfiles: ./Containerfile
-          image: ${{ env.IMAGE_REGISTRY }}/cfwarp
+          image: ${{ env.IMAGE_REGISTRY }}/miniserve
           tags: latest ${{ github.event.release.tag_name }}
       
       - name: Push to GHCR
