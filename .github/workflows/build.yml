@@ -46,7 +46,7 @@ jobs:
       - name: Push to GHCR
         uses: redhat-actions/push-to-registry@v2
         with:
-          image: cfwarp
+          image: miniserve
           tags: ${{ steps.build_image.outputs.tags }}
           registry: ${{ env.IMAGE_REGISTRY }}
           username: ${{ env.REGISTRY_USER }}
